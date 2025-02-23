@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navigation styles from original */
+nav {
+    background: #131C25;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links :hover {
+    background-color: #4a775e;
+    padding: 8px 10px;
+    border-radius: 8px;
+    font-weight: bolder;
+}
+
+.nav-links a:hover {
+    color: #fff1b0;
+}
+
+/* Internships specific styles */
+.internships-hero {
+    margin-top: 60px;
+    padding-top: 100px;
+    background: linear-gradient(rgb(19, 28, 37), rgba(19, 28, 37), rgb(99, 151, 155),rgba(255, 255, 255)),
+    url('/api/placeholder/1920/1080') center/cover;
+    color: white;
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+.internships-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.search-filters {
+    max-width: 800px;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+.search-filters input,
+.search-filters select {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.internships-list {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.internship-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.internship-card:hover {
+    transform: translateY(-5px);
+    background-color: rgb(167, 255, 167);
+}
+
+.internship-card h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: #3498db;
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+/* Footer styles from original */
+footer {
+    background: linear-gradient(rgba(41, 52, 87, 0.9), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+                url('/api/placeholder/1920/1080') center/cover;
+    color: white;
+    padding: 3rem 1rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+}
+.footer-section ul li a:hover {
+    background-color: rgb(235, 188, 119);
+    color: #462222;
+    font-weight: bold;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Menu Toggle for Mobile */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    transition: 0.3s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #131C25;
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .search-filters {
+        grid-template-columns: 1fr;
+    }
+
+    .internships-hero h1 {
+        font-size: 2rem;
+        padding: 0 1rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/img/favicon.png" type="image/png">
+    <title>Internships - InterrnHub</title>
+    <link rel="stylesheet" href="assets/css/internships.css">
+    <style>    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/img/logo.jpeg" alt="" height="50px" style="border-radius: 10px;">
+            </div>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="internships.html">Internships</a>
+                <a href="placements.html">Placements</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="#" class="auth">Sign In/Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="internships-hero">
+        <h1>Find Your Perfect Internship</h1>
+        <div class="search-filters">
+            <input type="text" placeholder="Search by keyword, company, or role">
+            <select>
+                <option>All Categories</option>
+                <option>Technology</option>
+                <option>Marketing</option>
+                <option>Finance</option>
+                <option>Design</option>
+                <option>Business</option>
+            </select>
+            <select>
+                <option>All Locations</option>
+                <option>Remote</option>
+                <option>On-site</option>
+                <option>Hybrid</option>
+            </select>
+            <button class="btn btn-primary">Search</button>
+        </div>
+    </section>
+
+    <section class="internships-list">
+        <div class="internship-card">
+            <h3>Software Development Intern</h3>
+            <p class="company">Tech Solutions Inc.</p>
+            <p class="location">📍 Remote</p>
+            <p class="duration">⏱️ 3 months</p>
+            <p class="stipend">₹15,000/month</p>
+            <button class="btn btn-primary">Apply Now</button>
+        </div>
+
+        <div class="internship-card">
+            <h3>Digital Marketing Intern</h3>
+            <p class="company">Growth Marketing Pro</p>
+            <p class="location">📍 Bangalore</p>
+            <p class="duration">⏱️ 6 months</p>
+            <p class="stipend">₹12,000/month</p>
+            <button class="btn btn-primary">Apply Now</button>
+        </div>
+
+        <div class="internship-card">
+            <h3>UI/UX Design Intern</h3>
+            <p class="company">Creative Studios</p>
+            <p class="location">📍 Hybrid</p>
+            <p class="duration">⏱️ 4 months</p>
+            <p class="stipend">₹20,000/month</p>
+            <button class="btn btn-primary">Apply Now</button>
+        </div>
+
+        <div class="internship-card">
+            <h3>Data Analytics Intern</h3>
+            <p class="company">Data Insights Co.</p>
+            <p class="location">📍 Remote</p>
+            <p class="duration">⏱️ 3 months</p>
+            <p class="stipend">₹18,000/month</p>
+            <button class="btn btn-primary">Apply Now</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Find Internships</a></li>
+                    <li><a href="#">For Employers</a></li>
+                    <li><a href="#">Success Stories</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Career Guide</a></li>
+                    <li><a href="#">Resume Tips</a></li>
+                    <li><a href="#">Interview Prep</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 InterrnHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

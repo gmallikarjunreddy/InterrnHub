@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/img/favicon.png" type="image/png">
+    <title>Welcome - InterrnHub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #131C25;
+        }
+
+        .welcome-screen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #131C25;
+            z-index: 10;
+            opacity: 1;
+            transition: opacity 1s ease-out;
+        }
+
+        .welcome-message {
+            font-size: 3rem;
+            font-weight: bold;
+            color: white;
+            animation: fadeIn 0.2s ease-in forwards;
+            text-align: center;
+            opacity: 0;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-100px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .main-content {
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        .main-content.visible {
+            opacity: 1;
+        }
+
+        .start-btn {
+            background-color: #3498db;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .start-btn:hover {
+            background-color: #2980b9;
+        }
+        p{
+            display: none;
+        }
+        @media screen and (max-width: 425px) {
+            h1{
+                font-size: 2rem;
+            }
+            .welcome-screen{
+                display: flex;
+                flex-wrap: wrap;
+                
+
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="welcome-screen">
+        <div class="welcome-message">
+            <img src="assets/img/logo.jpeg" alt="Logo" width="300px"> 
+        </div>
+        <div>
+            <p class="start-para">Welcome to InterrnHub, your gateway to exciting internship opportunities!</p>
+
+            <button class="start-btn" style="display: none; float: center;">Let's Explore</button>
+        </div>
+    </div>
+
+    <!-- Background Audio -->
+    <audio id="background-audio">
+        <source src="assets/audio/background-music.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        // Audio and content reveal after user clicks "Get Started"
+        const startButton = document.querySelector('.start-btn');
+        const startPara = document.querySelector('.start-para');
+        const audio = document.getElementById('background-audio');
+        const welcomeScreen = document.querySelector('.welcome-screen');
+        const mainContent = document.querySelector('.main-content');
+
+        startButton.addEventListener('click', () => {
+            // Play background music (it will play for the duration of the welcome screen)
+            audio.play();
+
+            // Hide the welcome screen after a short delay (for smooth transition)
+            welcomeScreen.style.opacity = 0;
+
+            // Redirect to home.html after a short delay (for smooth transition)
+            setTimeout(() => {
+                // Redirect to home.html
+                window.location.href = 'home.html';
+            }, 3000); // 3000ms to match the duration of the fade-in animation
+        });
+        // Show the button after the animation finishes
+        document.addEventListener('DOMContentLoaded', () => {
+                    const welcomeMessage = document.querySelector('.welcome-message');
+                    const startPara = document.querySelector('.start-para');
+                    const startButton = document.querySelector('.start-btn');
+                    
+                    welcomeMessage.addEventListener('animationend', () => {
+                        startButton.style.display = 'block';
+                    });
+                });
+    </script>
+</body>
+</html>

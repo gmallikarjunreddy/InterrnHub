@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/img/favicon.png" type="image/png">
+    <title>Welcome - InterrnHub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #131C25;
+        }
+
+        .welcome-screen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #131C25;
+            z-index: 10;
+            opacity: 1;
+            transition: opacity 1s ease-out;
+        }
+
+        .welcome-message {
+            font-size: 3rem;
+            font-weight: bold;
+            color: white;
+            display: flex; /* Use flexbox for proper alignment */
+            align-items: center; /* Align items vertically in the center */
+            justify-content: center; /* Center them horizontally */
+            animation: fadeIn 3s ease-out forwards;
+            text-align: center;
+            opacity: 0;
+        }
+
+        .welcome-message img {
+            margin-right: 15px; /* Space between the logo and text */
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-100px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .main-content {
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        .main-content.visible {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Welcome Screen -->
+    <div class="welcome-screen">
+        <div class="welcome-message">
+            <img src="assets/img/logo.jpeg" alt="Logo" width="32y0px"> 
+            
+        </div>
+    </div>
+
+    <!-- Main Website Content (Hidden initially) -->
+    <div class="main-content">
+        <!-- Your actual website content goes here -->
+        <nav>
+            <div>Navbar Content</div>
+        </nav>
+
+        <section>
+            <h1>Main Content</h1>
+            <p>This is the actual website after the welcome message disappears.</p>
+        </section>
+    </div>
+
+    <!-- Background Audio -->
+    <audio id="background-audio">
+        <source src="assets/audio/background-music.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        let audioPlayed = false;
+
+        window.onload = () => {
+            // Wait for the user to click anywhere on the page before playing the audio
+            document.body.addEventListener('click', () => {
+                if (!audioPlayed) {
+                    const audio = document.getElementById('background-audio');
+                    audio.play(); // Play background music
+                    audioPlayed = true; // Prevent audio from playing again
+                }
+            });
+
+            // Start the welcome screen and show content after animation
+            setTimeout(() => {
+                document.querySelector('.welcome-screen').style.opacity = 0;
+                document.querySelector('.main-content').classList.add('visible');
+            }, 3000); // Match this with the animation duration (3s)
+        };
+    </script>
+</body>
+</html>

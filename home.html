@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InternHub</title>
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div class="welcome-screen">
+        <div class="welcome-message">
+            <img src="assets/img/logo.jpeg" alt="Logo" width="320px"> 
+        </div>
+    </div>
+    <nav>
+        <div class="nav-container">
+            <div class="logo"><img 
+                style="border-radius: 10px;"
+                src="assets/img/logo.jpeg" alt="" height="50px"></div>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="internships.html">Internships</a>
+                <a href="placements.html">Placements</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="auth.html" class="auth">Sign In/Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Launch Your Career with InternHub</h1>
+            <p>Connect with top companies, find your dream internship, and kickstart your professional journey.</p>
+            <div class="cta-buttons">
+                <a href="internships.html" class="btn btn-primary" target="_blank">Find Internships</a>
+                <a href="#" class="btn btn-secondary">For Employers</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="features">
+        <h2>Why Choose InternHub?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>Premium Opportunities</h3>
+                <p>Access exclusive internships and placement opportunities from leading companies across various industries.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Career Guidance</h3>
+                <p>Get expert advice on resume building, interview preparation, and career development from industry professionals.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Easy Application</h3>
+                <p>Streamlined application process with profile management and real-time application tracking.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Company Connect</h3>
+                <p>Direct interaction with company recruiters and hiring managers through our platform.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2 style="text-align: center;">Student Success Stories</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Thanks to InternHub, I landed my dream internship at a leading tech company. The platform made the application process seamless!"</p>
+                <p class="testimonial-author">- Sarah Johnson, Computer Science</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"The career guidance and resources provided by InternHub were invaluable in preparing me for my interviews."</p>
+                <p class="testimonial-author">- Mike Chen, Business Administration</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"I received multiple internship offers through InternHub. The platform's reach and network is truly impressive!"</p>
+                <p class="testimonial-author">- Emily Rodriguez, Marketing</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="companies">
+        <h2>Trusted by Leading Companies</h2>
+        <div class="company-logos">
+            <div class="company-logo"><img src="https://neodigitech.com/front-end/assets/header/startupindia-logo.png" alt="" height="80px"></div>
+            <div class="company-logo"><img src="https://edunetfoundation.org/wp-content/uploads/2022/11/Edunet-Foundation-logo.png" alt="" height="70px"></div>
+            <div class="company-logo"><img style="border-radius: 8px;" src="assets/img/logo.jpeg" alt="" height="80px"></div>
+        </div>
+    </section>
+    
+    <section class="cta-section">
+        <h2>Ready to Start Your Journey?</h2>
+        <p>Join thousands of students who have found their perfect internship through InternHub</p>
+        <div class="cta-buttons">
+            <a href="#" class="btn btn-primary">Sign Up Now</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="internships.html">Find Internships</a></li>
+                    <li><a href="#">For Employers</a></li>
+                    <li><a href="#">Success Stories</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Career Guide</a></li>
+                    <li><a href="#">Resume Tips</a></li>
+                    <li><a href="#">Interview Prep</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 InternHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        window.onload = () => {
+            // Wait for the user to click anywhere on the page before playing the audio
+            setTimeout(() => {
+                // Hide welcome screen and show main content after animation
+                document.querySelector('.welcome-screen').style.opacity = 0;
+                document.querySelector('.welcome-screen').style.pointerEvents = 'none'; // Disable interaction during animation
+                document.querySelector('.hero').classList.add('visible');
+                document.querySelector('.nav-links').style.pointerEvents = 'auto'; // Enable interaction after animation
+            }, 3000); // Adjust this time to match your animation duration (3s)
+        };
+
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
