@@ -4,123 +4,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/img/favicon.png" type="image/png">
-    <title>Welcome - InterrnHub</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            height: 100vh;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #131C25;
-        }
-
-        .welcome-screen {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #131C25;
-            z-index: 10;
-            opacity: 1;
-            transition: opacity 1s ease-out;
-        }
-
-        .welcome-message {
-            font-size: 3rem;
-            font-weight: bold;
-            color: white;
-            display: flex; /* Use flexbox for proper alignment */
-            align-items: center; /* Align items vertically in the center */
-            justify-content: center; /* Center them horizontally */
-            animation: fadeIn 3s ease-out forwards;
-            text-align: center;
-            opacity: 0;
-        }
-
-        .welcome-message img {
-            margin-right: 15px; /* Space between the logo and text */
-        }
-
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(-100px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .main-content {
-            opacity: 0;
-            transition: opacity 1.5s ease-in-out;
-        }
-
-        .main-content.visible {
-            opacity: 1;
-        }
-    </style>
+    <title>Internships - InterrnHub</title>
+    <link rel="stylesheet" href="assets/css/placements.css">
+    <style>    </style>
 </head>
 <body>
-    <!-- Welcome Screen -->
-    <div class="welcome-screen">
-        <div class="welcome-message">
-            <img src="assets/img/logo.jpeg" alt="Logo" width="32y0px"> 
-            
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/img/logo.jpeg" alt="" height="50px" style="border-radius: 10px;">
+            </div>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="internships.html">Internships</a>
+                <a href="placements.html">Placements</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="#" class="auth">Sign In/Sign Up</a>
+            </div>
         </div>
-    </div>
+    </nav>
 
-    <!-- Main Website Content (Hidden initially) -->
-    <div class="main-content">
-        <!-- Your actual website content goes here -->
-        <nav>
-            <div>Navbar Content</div>
-        </nav>
+    <section class="internships-hero">
+        <h1>Find Your Perfect Career</h1>
+        <div class="search-filters">
+            <input type="text" placeholder="Search by keyword, company, or role">
+            <select>
+                <option>All Categories</option>
+                <option>Technology</option>
+                <option>Marketing</option>
+                <option>Finance</option>
+                <option>Design</option>
+                <option>Business</option>
+            </select>
+            <select>
+                <option>All Locations</option>
+                <option>Remote</option>
+                <option>On-site</option>
+                <option>Hybrid</option>
+            </select>
+            <button class="btn btn-primary">Search</button>
+        </div>
+    </section>
 
-        <section>
-            <h1>Main Content</h1>
-            <p>This is the actual website after the welcome message disappears.</p>
-        </section>
-    </div>
+    <section class="internships-list">
+        <div class="internship-card">
+            <h3>Software Development Intern</h3>
+            <p class="company">Tech Solutions Inc.</p>
+            <p class="location">📍 Remote</p>
+            <p class="duration">⏱️ 3 months</p>
+            <p class="stipend">₹15,000/month</p>
+            <button class="btn btn-primary">Apply Now</button>
+        </div>
 
-    <!-- Background Audio -->
-    <audio id="background-audio">
-        <source src="assets/audio/background-music.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio>
+        <div class="internship-card">
+            <h3>Digital Marketing Intern</h3>
+            <p class="company">Growth Marketing Pro</p>
+            <p class="location">📍 Bangalore</p>
+            <p class="duration">⏱️ 6 months</p>
+            <p class="stipend">₹12,000/month</p>
+            <button class="btn btn-primary">Apply Now</button>
+        </div>
+
+        <div class="internship-card">
+            <h3>UI/UX Design Intern</h3>
+            <p class="company">Creative Studios</p>
+            <p class="location">📍 Hybrid</p>
+            <p class="duration">⏱️ 4 months</p>
+            <p class="stipend">₹20,000/month</p>
+            <button class="btn btn-primary">Apply Now</button>
+        </div>
+
+        <div class="internship-card">
+            <h3>Data Analytics Intern</h3>
+            <p class="company">Data Insights Co.</p>
+            <p class="location">📍 Remote</p>
+            <p class="duration">⏱️ 3 months</p>
+            <p class="stipend">₹18,000/month</p>
+            <button class="btn btn-primary">Apply Now</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Find Internships</a></li>
+                    <li><a href="#">For Employers</a></li>
+                    <li><a href="#">Success Stories</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Career Guide</a></li>
+                    <li><a href="#">Resume Tips</a></li>
+                    <li><a href="#">Interview Prep</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 InterrnHub. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script>
-        let audioPlayed = false;
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
 
-        window.onload = () => {
-            // Wait for the user to click anywhere on the page before playing the audio
-            document.body.addEventListener('click', () => {
-                if (!audioPlayed) {
-                    const audio = document.getElementById('background-audio');
-                    audio.play(); // Play background music
-                    audioPlayed = true; // Prevent audio from playing again
-                }
-            });
-
-            // Start the welcome screen and show content after animation
-            setTimeout(() => {
-                document.querySelector('.welcome-screen').style.opacity = 0;
-                document.querySelector('.main-content').classList.add('visible');
-            }, 3000); // Match this with the animation duration (3s)
-        };
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
     </script>
 </body>
 </html>
